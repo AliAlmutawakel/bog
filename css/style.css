@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:100,400,700');
+
+/*-------------------Global Styles----------------*/
+
+body {
+    background-color: #ebebeb;
+    font-family: 'Kanit', 'Roboto', sans-serif;
+}
+
+.row {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.res-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.smaller{
+    font-size: 90% !important;
+}
+
+.header.dark-bg{
+    color: white;
+}
+
+.header{
+    text-transform: capitalize;
+    margin: 0px !important;
+    padding: 1.46rem 0 1.168rem 0 !important;
+}
+
+.header::first-line{
+    font-weight: 300;
+}
+
+.header:after {
+    width:80px;
+    content:' ';
+    display:block;
+    border-bottom:2px solid red;
+    position:relative;
+    padding-bottom: 1.46rem;
+}
+
+.title{
+    border-left: solid 4px #F44336;
+    padding-left: 10px;
+}
+
+.title span{
+    font-weight: 100;
+}
+
+.btn-flat{
+    color: rgba(255,255,255,0.8) !important;
+}
+
+.absolute-center {
+    margin: auto;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.soft-center{
+    display:block !important;
+    margin:auto !important;
+    float:none !important;
+}
+.soft-center:after{
+    display:block !important;
+    margin:auto !important;
+    float:none !important;
+}
+.soft-center:before{
+    display:block !important;
+    margin:auto !important;
+    float:none !important;
+}
+
+.vertical-center{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.zoom-hover-wrapper{
+    overflow: hidden;
+}
+.zoom-hover{
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.zoom-hover:hover {
+    transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand')"; /* IE8 */
+   filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand'); /* IE6 and 7 */ 
+}
+
+.light-font{
+    font-weight: 100 !important;
+}
+.medium-font{
+    font-weight: 500 !important;
+}
+.bold-font{
+    font-weight: 700 !important;
+}
+/*-------------------nav----------------*/
+
+
+.logo-header .res-pic {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .nav {
+        width: 100%;
+    }
+}
+
+.nav .res-pic{
+    margin-top: 10px;
+}
+
+nav {
+    background-color: black;
+    height: 64px !important;
+}
+
+.nav .nav-donate {
+    position: relative;
+    height: 64px;
+    color: white;
+    line-height: 64px;
+}
+
+/*-------------------SPLASH----------------*/
+
+html,
+body {
+    height: 100%;
+}
+
+/* Video Overlay */
+
+#splash {
+    background-color: rgba(0, 0, 0, .65); /*DARKEN OVERLAY*/
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
+    transition: background-color 300ms ease;
+    width: 100%;
+}
+
+#splash .fade {
+    background-color: rgba(0, 0, 0, .85) !important;
+}
+
+#splash-title{
+    width: 40%;
+}
+
+/* Hero Video + Fallback */
+
+#hero-vid {
+    backface-visibility: hidden;
+    background: url("http://www.markhillard.com/sandbox/media/polina.jpg") no-repeat scroll 0 0 #000;
+    background-size: cover;
+    bottom: 0;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    perspective: 1000;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: -2;
+}
+
+#hero-pic {
+    display: block;
+    height: auto;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#content {
+    background-color: #ebebeb;
+    position: relative;
+    z-index: 0;
+}
+
+@media only screen and (max-width:768px) {
+    #splash {
+        height: auto;
+    }
+}
+
+
+/* Visibility Helpers */
+
+@media only screen and (min-width:769px) {
+    .visible-mobile,
+    .visible-tablet,
+    .hidden-desktop {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .visible-mobile,
+    .hidden-tablet,
+    .visible-desktop {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    .hidden-mobile,
+    .visible-tablet,
+    .visible-desktop {
+        display: none !important;
+    }
+}
+
+#splash a {
+  color: white;
+  text-decoration: none;
+}
+#splash .arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    width: 28px;
+}
+
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+
+/*---------WHAT IS THE BEAUTY OF GIVING-----------------*/
+
+.bog{
+    height: auto;
+    margin: 50px 0px 0px 0px !important;
+    border-top: 1px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+}
+
+.bog-pic{
+    background: url(http://photos.travellerspoint.com/57123/large_44805106-L.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: auto;
+}
+
+.bog li{
+    font-size: 120%;
+}
+
+.bog li span{
+    color: #F44336;
+    font-weight: 700;
+    font-size: 150%;
+    display: inline-block;
+    width: 30px;
+}
+
+.bog-love{
+    width: 320px;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*-------------------FEATURED----------------*/
+
+.feature{
+    background-image: url(../res/brush-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.progress-row{
+    display: flex;
+    width: 100%;
+}
+
+.progress-number{
+    flex: 1; /* additionally, equal width */ 
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#clockdiv{
+    margin: 20px 0px 40px 0px;
+}
+
+#clockdiv .header{
+    float: left;
+    width: 100px;
+    padding: 0px !important;
+}
+
+#clockdiv .header:after{
+    padding-bottom: 1rem;
+    width: 0px;
+}
+
+#clockdiv div{
+    border-right: 2px #F44336 solid;
+    float: left;
+    width: 72px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#clockdiv div:last-child {
+    border-right: 0px;
+}
+
+
+@media only screen and (max-width:700px) {
+    #progress{
+        width: 150px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .progress-row {
+        display: block;
+    }
+    .feature .responsive-img{
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .responsive-img#product{
+        height: 300px;
+    }
+    #clockdiv .header{
+        float: none;
+        width: auto;
+    }
+    #clockdiv div{
+        width: 25%;
+    }
+}
+
+/*---------FEATURED CHARITY--------------*/
+.arrow-con{
+    height: 140px;
+}
+#arrow-grow {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+    
+}
+#arrow-grow:after {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 2px;
+  background-color: #5A5351;
+  right: 50%;
+  transition: height 0.5s ease-out;
+}
+#arrow-grow:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #5A5351;
+  border-right: 2px solid #5A5351;
+  transform: rotate(45deg);
+  top: calc(100% - 30px);
+  position: absolute;
+  right: calc(50% - 10px);
+}
+#arrow-grow:hover {
+  cursor: pointer;
+}
+#arrow-grow.grown:after {
+  height: 100px;
+}
+
+.btn-floating #prev, .btn-floating #next{
+    margin-top: 10px;
+}
+#prev,#next {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    cursor: pointer;
+}
+#next {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#prev:before, #next:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background-color: white;
+    right: 50%;
+    transition: 0.2s ease-out;
+}
+#prev:after, #next:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    top: calc(50% - 5px);
+    position: absolute;
+    right: calc(19% - 5px);
+}
+#next:before {
+    margin-left: 20px;
+}
+#prev:before {
+    margin-left: 20px;
+}
+.btn-floating #prev:before, .btn-floating #next:before{
+    margin: 0px;
+}
+#prev.grown:before {
+    width: 20px;
+    margin-left: 0px;
+}
+#next.grown:before {
+    width: 20px;
+    margin-left: 0px;
+}
+.carousel-arrow-left, .carousel-arrow-right {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    width: 40px;
+}
+.carousel-arrow-left{
+    left: 15px;
+}
+.carousel-arrow-right{
+    right: 15px;
+}
+
+#charity-logo{
+    width: 300px;
+    max-height: 300px;
+    padding: 25px 0px 25px 0px;
+}
+
+#gallery {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.thumbnail-wrapper {
+  background-color: #333;
+  min-width: 12rem;
+  min-height: 8rem;
+  position: relative;
+  flex: 1;
+  flex-basis: 8rem;
+  margin-right: 2px;
+  margin-bottom: 2px;
+    overflow: hidden;
+}
+
+.thumbnail-wrapper:nth-child(5n) {
+  flex-basis: 14rem;
+}
+
+.thumbnail-wrapper:nth-child(2n+1) {
+  flex-basis: 10rem;
+}
+
+.thumbnail-wrapper:nth-child(7n+4) {
+  flex-basis: 20rem;
+  min-height: 12rem;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*-------------------Past Campaigns----------------*/
+
+.campaigns .bx-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.campaigns .parallax-container{
+    background-color: rgba(0, 0, 0, 0.60)
+}
+
+.campaigns .bx-wrapper .bx-pager.bx-default-pager a.active, .campaigns .bx-wrapper .bx-pager.bx-default-pager a:focus, .campaigns .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: white;
+}
+.campaigns .bx-wrapper .bx-pager.bx-default-pager a {
+    background: rgba(255, 255, 255, 0.4);
+}
+.campaigns .slide a{
+    width: 300px;
+    height: 150px;
+    display: block;
+}
+.campaigns .image-replaced{
+    background-size: cover;
+}
+
+/*---------------Footer------------------*/
+.scroll-top{
+    width: 100%;
+}
+.scroll-top a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1px;
+    margin-top: -40px
+}
+.page-footer {
+/*    background-color: black;*/
+}
