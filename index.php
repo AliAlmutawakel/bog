@@ -47,7 +47,7 @@
     <!--Splash-->
     <div id="splash">
         <div id="splash-title" class="absolute-center animated slideInLeft">
-            <h1 class="header dark-bg">Beauty<br>Gives Back</h1>
+            <h1 class="header dark-bg"><span>Beauty</span><br>Gives Back</h1>
         </div>
         <video class="visible-desktop" id="hero-vid" poster="http://www.markhillard.com/sandbox/media/polina.jpg" autoplay loop muted>
             <source type="video/webm" src="http://www.markhillard.com/sandbox/media/polina.webm"></source>
@@ -74,27 +74,31 @@
         </div>
 
         <!--navigation-->
-        <div class="container nav">
+        <div class="nav">
             <nav class="nav-extended">
                 <div class="nav-wrapper">
-
-                    <a class="waves-effect btn-flat right nav-donate red">Donate
-                        <i class="fa fa-heart smaller" aria-hidden="true"></i>
-                    </a>
 
                     <a data-activates="mobile-menu" class="button-collapse">
                         <i class="material-icons">menu</i>
                     </a>
+                    <div class="container">
+                    <a class="waves-effect btn-flat right nav-donate red">Donate
+                        <i class="fa fa-heart smaller" aria-hidden="true"></i>
+                    </a>
 
-                    <ul id="nav-mobile" class="left hide-on-med-and-down">
-                        <li><a href="sass.html">Sass</a></li>
-                        <li><a href="badges.html">Components</a></li>
-                        <li><a href="collapsible.html">JavaScript</a></li>
-                    </ul>
+                    
 
+                    
+                        <ul id="nav-mobile" class="left hide-on-med-and-down">
+                            <li class="active"><a href="sass.html">Sass</a></li>
+                            <li><a href="badges.html">Components</a></li>
+                            <li><a href="collapsible.html">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    
                     <ul class="side-nav" id="mobile-menu">
                         <li class="container"><img class="res-pic" src="res/bog-logo.svg"></li>
-                        <li><a href="sass.html">Sass</a></li>
+                        <li class="active"><a href="sass.html">Sass</a></li>
                         <li><a href="badges.html">Components</a></li>
                         <li><a href="collapsible.html">JavaScript</a></li>
                     </ul>
@@ -102,6 +106,7 @@
                 </div>
             </nav>
         </div>
+        <!--/navigation-->
 
         <!--WHAT IS THE BEAUTY OF GIVING-->
         <div class="row bog grey lighten-2 zoom-hover-wrapper">
@@ -110,7 +115,7 @@
 
                 <div class="container" style="padding-bottom:30px">
                     <h3 class="header">
-                        what is the<br> beauty of giving
+                        <span>what is the</span><br>beauty of giving
                     </h3>
                     <p>It is a campaign arranged by Modern Beauty Supplies. Aimed to raise funds for charity. We partner up with a different manufacturer and charity every two months. We sell the product from the manufacturer and give the products to the charity.</p>
                     <ul>
@@ -127,15 +132,13 @@
         <!--Featured Product-->
         <div class="feature" animation="fadeIn">
             <div class="container">
-                <h3 class="header">
-                    July-August<br>Featured Product
-                </h3>
+                <h4 class="header">
+                    <span>July-August</span><br>Featured Product
+                </h4>
                 <div class="row">
 
                     <!--Product-->
                     <div class="col l4 s12">
-                        <!--                        <img class="responsive-img" id="product" src="">-->
-
                         <ul class="cd-gallery">
                             <li class="z-depth-3">
                                 <a href="http://codyhouse.co/">
@@ -174,7 +177,7 @@
                         <div class="row">
 
                             <div class="col s12">
-                                <h4 class="header">ROOT<br>BOOST SPRAY</h4>
+                                <h4 class="header"><span>ROOT</span><br>BOOST SPRAY</h4>
                             </div>
 
                             <div class="col s12">
@@ -185,7 +188,7 @@
                             <div class="col s12">
                                 <div class="row">
                                     <div class="col s12" id="clockdiv">
-                                        <h5 class="header">Product<br>ends in</h5>
+                                        <h5 class="header"><span>Product</span><br>ends in</h5>
                                         <span class="endtime">Tue May 26 2017 16:14:26 GMT-0600 (MDT)</span>
                                         <div>
                                             <span class="days"></span><br>
@@ -219,10 +222,18 @@
                     </div>
                     <!--/Feautre Content-->
 
-                    <!--Featured Charity-->
+                </div>
+            </div>
+        </div>
+        <!--/Feature-->
+
+        <!--Progress-->
+        <div class="progress-con">
+            <div class="container">
+                <div class="row">
+
                     <div class="col s12">
-                        <hr/>
-                        <h4 class="header">Progress<br>Status</h4>
+                        <h4 class="header"><span>Progress</span><br>Status</h4>
                         <!--progress bar-->
                         <div class="col l7 m7 s12 soft-center">
                             <div class="row">
@@ -245,59 +256,64 @@
 
                         <!--arrow-->
                         <div class="col l6 soft-center arrow-con">
-                            <h6 class="center">Profit Goes to</h6>
+                            <h6 class="center" style="color:#8c2020">Profit Goes to</h6>
                             <span id="arrow-grow" class="soft-center"></span>
                         </div>
                         <!--/arrow-->
-
-                        <!--Charity-->
-                        <div class="col s12" animation="fadeInDown">
-                            <img id="charity-logo" class="responsive-img soft-center" src="https://static1.squarespace.com/static/541800efe4b00c72b2216ebe/546f31efe4b028901507eafc/546f320be4b028901507eb2c/1416577265549/action+for+children-logo.png">
-                        </div>
-                        <div class="col l6 s12" animation="fadeInLeft">
-                            <?php include("content.php")?>
-                        </div>
-                        <div class="col l6 s12" animation="fadeInRight">
-                            <?php include("carousel.php")?>
-                        </div>
-                        <!--/Charity-->
-
                     </div>
-                    <!--/Featured Charity-->
                 </div>
             </div>
-
-
         </div>
-        <!--/Feature-->
+        <!--/Progress-->
 
+        <!--Featured charity-->
+        <div class="container">
+            <div class="row">
+                <h4 class="header"><span>July-August</span><br>Featured Charity</h4>
 
-        <!--Past Campaigns-->
-        <div class="campaigns">
-            <div class="parallax-container">
-                <div class="parallax"><img src="http://materializecss.com/images/parallax2.jpg" /></div>
-
-                <div class="container">
-                    <h1 class="header dark-bg">Past<br>Campaigns</h1>
-                    <div class="slider4">
-                        <div class="slide">
-                            <a href="#" class="replace-image zoom-hover-wrapper"><img class="zoom-hover" src="img/ugmonk-bag-1.jpg"></a>
-                        </div>
-                        <div class="slide"><img src="http://placehold.it/300x150&text=FooBar2"></div>
-                        <div class="slide"><img src="http://placehold.it/300x150&text=FooBar3"></div>
-                        <div class="slide"><img src="http://placehold.it/300x150&text=FooBar4"></div>
-                        <div class="slide"><img src="http://placehold.it/300x150&text=FooBar5"></div>
-                    </div>
-                    <div id="slider-prev"></div>
-                    <div id="slider-next"></div>
-                
+                <!--Charity-->
+                <div class="col s12" animation="fadeInDown">
+                    <img id="charity-logo" class="responsive-img soft-center" src="https://static1.squarespace.com/static/541800efe4b00c72b2216ebe/546f31efe4b028901507eafc/546f320be4b028901507eb2c/1416577265549/action+for+children-logo.png">
                 </div>
+                <div class="col l6 s12" animation="fadeInLeft">
+                    <?php include("content.php")?>
+                </div>
+                <div class="col l6 s12" animation="fadeInRight">
+                    <?php include("carousel.php")?>
+                </div>
+                <!--/Charity-->
 
             </div>
         </div>
-        <!--/Past Campaigns-->
+        <!--/Featured Charity-->
+    </div>
 
-        <footer class="page-footer">
+    <!--Past Campaigns-->
+    <div class="campaigns">
+        <div class="parallax-container">
+            <div class="parallax"><img src="http://materializecss.com/images/parallax2.jpg" /></div>
+
+            <div class="container">
+                <h1 class="header dark-bg"><span>Past</span><br>Campaigns</h1>
+                <div class="slider4">
+                    <div class="slide">
+                        <a href="#" class="replace-image zoom-hover-wrapper"><img class="zoom-hover" src="img/ugmonk-bag-1.jpg"></a>
+                    </div>
+                    <div class="slide"><img src="http://placehold.it/300x150&text=FooBar2"></div>
+                    <div class="slide"><img src="http://placehold.it/300x150&text=FooBar3"></div>
+                    <div class="slide"><img src="http://placehold.it/300x150&text=FooBar4"></div>
+                    <div class="slide"><img src="http://placehold.it/300x150&text=FooBar5"></div>
+                </div>
+                <div id="slider-prev"></div>
+                <div id="slider-next"></div>
+
+            </div>
+
+        </div>
+</div>
+    <!--/Past Campaigns-->
+
+    <footer class="page-footer">
             <div class="scroll-top">
                 <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">&#xE316;</i></a>
             </div>
@@ -325,10 +341,7 @@
                 </div>
             </div>
         </footer>
-    </div>
-
-
-
+    
 </body>
 
 </html>

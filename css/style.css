@@ -31,8 +31,11 @@ body {
     padding: 1.46rem 0 1.168rem 0 !important;
 }
 
-.header::first-line{
+.header span{
     font-weight: 300;
+}
+.header span:after{
+    content: "\A";
 }
 
 .header:after {
@@ -117,6 +120,7 @@ body {
 .bold-font{
     font-weight: 700 !important;
 }
+
 /*-------------------nav----------------*/
 
 
@@ -134,10 +138,18 @@ body {
 .nav .res-pic{
     margin-top: 10px;
 }
-
-nav {
-    background-color: black;
-    height: 64px !important;
+.nav{
+    height: 65px;
+}
+nav{
+    transition:500ms;
+    background: none;
+    height: 65px !important;
+    box-shadow: none;
+    border-top: 1px solid gray;
+}
+nav a{
+    color: black !important;
 }
 
 .nav .nav-donate {
@@ -147,18 +159,25 @@ nav {
     line-height: 64px;
 }
 
-/*-------------------SPLASH----------------*/
-
-html,
-body {
-    height: 100%;
+.nav-extended.pinned{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: black;
 }
-
+.nav-extended.pinned a{
+    color:white !important;
+}
+.nav-extended.pinned ul li.active {
+    background-color: rgba(255,255,255,0.2);
+}
+/*-------------------SPLASH----------------*/
 /* Video Overlay */
 
 #splash {
     background-color: rgba(0, 0, 0, .65); /*DARKEN OVERLAY*/
-    height: 100%;
+    height: 100vh;
     left: 0;
     position: relative;
     top: 0;
@@ -202,7 +221,7 @@ body {
 #content {
     background-color: #ebebeb;
     position: relative;
-    z-index: 0;
+    padding-bottom: 50px;
 }
 
 @media only screen and (max-width:768px) {
@@ -210,7 +229,6 @@ body {
         height: auto;
     }
 }
-
 
 /* Visibility Helpers */
 
@@ -334,26 +352,12 @@ body {
 /*-------------------FEATURED----------------*/
 
 .feature{
-    background-image: url(../res/brush-bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
     overflow: auto;
     padding-bottom: 50px;
 }
-
-.progress-row{
-    display: flex;
-    width: 100%;
-}
-
-.progress-number{
-    flex: 1; /* additionally, equal width */ 
-    padding: 1em;
-    align-items: center;
-    justify-content: center;
-}
-
 
 #clockdiv{
     margin: 20px 0px 40px 0px;
@@ -389,9 +393,6 @@ body {
         margin: 0 auto;
         max-width: 100%;
     }
-    .progress-row {
-        display: block;
-    }
     .feature .responsive-img{
         max-width: 100%;
         margin: 0 auto;
@@ -409,9 +410,67 @@ body {
     }
 }
 
-/*---------FEATURED CHARITY--------------*/
+/*----------PROGRESS--------------*/
+
+.progress-con:before{
+    content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	bottom: 0;
+    overflow: hidden;
+	transform-origin: right bottom;
+    -webkit-transform: skewY(2deg) translateZ(0);
+    -moz-transform: skewY(2deg) translateZ(0);
+    -ms-transform: skewY(2deg) translateZ(0);
+    -o-transform: skewY(2deg) translateZ(0);
+    transform: skewY(2deg) translateZ(0);
+}
+.progress-con:after{
+    content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	bottom: 0;
+    overflow: hidden;
+	transform-origin: right bottom;
+    -webkit-transform: skewY(-2deg) translateZ(0);
+    -moz-transform: skewY(-2deg) translateZ(0);
+    -ms-transform: skewY(-2deg) translateZ(0);
+    -o-transform: skewY(-2deg) translateZ(0);
+    transform: skewY(-2deg) translateZ(0);
+}
+.progress-con{
+	width: 100%;
+	position: relative;
+	background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+    margin-bottom: 50px;
+    z-index: 0;
+}
+.progress-con .header{
+    margin: -40px 0px -70px 0px !important;
+}
+
+.progress-row{
+    display: flex;
+    width: 100%;
+}
+
+.progress-number{
+    flex: 1; /* additionally, equal width */ 
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+}
+.progress-number label{
+    color: #8c2020;
+}
 .arrow-con{
-    height: 140px;
+    height: 60px;
 }
 #arrow-grow {
   position: relative;
@@ -446,6 +505,20 @@ body {
 #arrow-grow.grown:after {
   height: 100px;
 }
+
+@media only screen and (max-width:700px) {
+    .progress-row {
+        display: block;
+    }
+    .arrow-con{
+        height: 80px;
+    }
+    .progress-con .header{
+        margin: 0px !important;
+    }
+}
+
+/*---------FEATURED CHARITY--------------*/
 
 .btn-floating #prev, .btn-floating #next{
     margin-top: 10px;
@@ -585,6 +658,7 @@ body {
 .campaigns .slide a{
     width: 300px;
     height: 150px;
+    max-width: 100%;
     display: block;
 }
 .campaigns .image-replaced{
@@ -603,5 +677,5 @@ body {
     margin-top: -40px
 }
 .page-footer {
-/*    background-color: black;*/
+    background-color: black;
 }
